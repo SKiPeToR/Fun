@@ -1,8 +1,8 @@
 //1
 function isTimeValid(minutes,seconds){
     if (minutes<24 && minutes>0 && seconds<60 && seconds>0){
-        return "yes";
-    } else return "no";
+        return true;
+    } else return false;
 }
 
 //2
@@ -24,29 +24,29 @@ function getSeason(month){
     switch(month){
         case 12:
         case 1:
-        case 2: return "«ËÏ‡"; break;
+        case 2: return "–ó–∏–º–∞"; break;
         case 3:
         case 4:
-        case 5: return "¬ÂÒÌ‡"; break;
+        case 5: return "–í–µ—Å–Ω–∞"; break;
         case 6:
         case 7:
-        case 8: return "ÀÂÚÓ"; break;
+        case 8: return "–õ–µ—Ç–æ"; break;
         case 9:
         case 10:
-        case 11: return "ŒÒÂÌ¸"; break;
-        default: return "ÕÂ‚ÂÌ˚È ÏÂÒˇˆ";
+        case 11: return "–û—Å–µ–Ω—å"; break;
+        default: return "–ù–µ–≤–µ—Ä–Ω—ã–π –º–µ—Å—è—Ü";
     }
 }
 
 //4
 function getDayDeclension(day){
     day=day%100;
-    if(day>10 && day<15) return "‰ÌÂÈ";
+    if(day>10 && day<15) return "–î–Ω–µ–π";
     else {
         switch(day%10){
-            case 1: return "‰ÂÌ¸"; break;
-            case 2: case  3: case 4: return "‰Ìˇ"; break;
-            default: return "‰ÌÂÈ";
+            case 1: return "–î–µ–Ω—å"; break;
+            case 2: case  3: case 4: return "–î–Ω—è"; break;
+            default: return "–î–Ω–µ–π";
         }
     }
 }
@@ -58,7 +58,7 @@ function getSumm(namber){
     return summ;
 }
 
-//5 , ‚ÚÓ‡ˇ ‰ÓÏ‡¯Í‡ (ÂÍÛÒËˇ)
+//5 , –≤—Ç–æ—Ä–∞—è –¥–æ–º–∞—à–∫–∞ (—Ä–µ–∫—É—Ä—Å–∏—è)
 function getSummRec(namber){
     if (namber>0) return (namber+getSummRec(--namber));
     else return 0;
@@ -70,13 +70,13 @@ function getMultiplicationTable(namber){
         console.log(namber+" * "+count+" = "+count*namber);
 }
 
-//7_ –”√
+//7_–ö–†–£–ì
 function isPointInCircle(x,y){
     if ( Math.pow((x-3),2)+Math.pow((y-5),2)<=16) return true;
     else return false;
 }
 
-//7_◊ÂÚ˚ÂıÛ„ÓÎ¸ÌËÍ
+//7_–ß–µ—Ç—ã—Ä–µ—Ö—É–≥–æ–ª—å–Ω–∏–∫
 function isPointInShape(x,y){
     if (x+1.7*y<=5 && (x-1.75*y>=-7) && (1.25*x+y>=-10) && (x-2.5*y<=5)) return true;
     else return false;
