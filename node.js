@@ -1,6 +1,6 @@
 //1
 function isTimeValid(minutes,seconds){
-    if (minutes<24 && minutes>0 && seconds<60 && seconds>0){
+    if (minutes<24 && minutes>=0 && seconds<60 && seconds>=0){
         return true;
     } else return false;
 }
