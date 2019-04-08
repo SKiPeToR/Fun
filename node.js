@@ -78,6 +78,6 @@ function isPointInCircle(x,y){
 
 //7_Четырехугольник
 function isPointInShape(x,y){
-    if (x+1.7*y<=5 && (x-1.75*y>=-7) && (1.25*x+y>=-10) && (x-2.5*y<=5)) return true;
+    if ((-3*x-5*y>=-15) && (x-1.75*y>=-7) && (1.25*x+y>=-10) && (x-2.5*y<=5)) return true;
     else return false;
 }
