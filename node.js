@@ -7,10 +7,10 @@ function isTimeValid(minutes,seconds){
 
 //2
 function addMinutes(hours, minutes, addminutes){
-    var m='0';
+    var m;
     minutes+=addminutes;
-    if(minutes>59) { minutes-=60; hours+=1;}
-    if(hours>23) {hours-=24;}
+    while (minutes>59) { minutes-=60; hours+=1;}
+    while (hours>23) {hours-=24;}
     if(hours<10) m+=String(hours);
     else m=String(hours);
     m+=":";
