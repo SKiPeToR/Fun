@@ -30,7 +30,6 @@ module.exports = {
         if(stroka[stroka.length-1]==" ") stroka=stroka.slice(0,-2);
         return stroka;},
     addressBook: function(stroka){var countOfProbels=0; // good evening :)
-        var arr=["Martin: 123324,234,234324,324","Alwares: 324","Guchis: 23123,324,312321", "Rodrigazz: 324,456"];
         for(var k=0; k<stroka.length-1;k++){if (stroka[k]==' '  )countOfProbels++};
         var command=stroka.slice(0,stroka.indexOf(" "));
         var str2=stroka.slice(stroka.indexOf(" ")+1,stroka.length);
