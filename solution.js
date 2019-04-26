@@ -11,7 +11,7 @@ module.exports = {
         for (var i=0;i<stroka.length;i++){
             if (stroka[i]=="#") {
                 begin=1+i++; kArray++;
-                while(stroka[i]!=" "){
+                while((stroka[i]!=" ")|| (i=stroka.length-1)){
                     i++;
                 }
                 end=i;
@@ -45,7 +45,7 @@ module.exports = {
                     if (item.includes(command)){
                         //проверка на совпадение в номерах контакта
                         array.forEach(function(jtem,j,array){
-                            if(item.includes(jtem)==false) {item=item+","+jtem; arr[i]=item;}
+                            if(item.includes(jtem)==false) {item=item+", "+jtem; arr[i]=item;}
                         })
                     }
                     else {countOfNesovpalo++;}
