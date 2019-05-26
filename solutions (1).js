@@ -88,7 +88,7 @@ module.exports = {
     timeShift: function(inDate) {
         return{
         date: new Date(Date.parse(inDate)),
-
+        value:'',
         add:function(count, param){
             switch(param) {
                 case 'years': this.date.setFullYear(this.date.getFullYear() + count); break;
@@ -97,6 +97,7 @@ module.exports = {
                 case 'hours': this.date.setHours(this.date.getHours() + count); break;
                 case 'minutes': this.date.setMinutes(this.date.getMinutes() + count); break;
             }
+            this.value=this.date;
             return this;
         },
 
@@ -108,6 +109,7 @@ module.exports = {
                 case 'hours': this.date.setHours(this.date.getHours() - count2); break;
                 case 'minutes': this.date.setMinutes(this.date.getMinutes() - count2); break;
             }
+            this.value=this.date;
             return this;
         },
     }},
