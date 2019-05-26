@@ -13,14 +13,10 @@ Collection.prototype.at=function (index) {
 }
 Collection.prototype.append=function (elements){
     var arr=this.array;
-    for ( var index = 0 ; index < arguments.length ; index++ ) {
-        if(Array.isArray(arguments[index])){
-            arguments[index].forEach(function(item,i,mass){
-                arr.push(item);
-            })
-        }
-        else arr.push(arguments[index]);
+    if(elements.hasOwnProperty('array')){
+        arr=arr.concat(elements.array);
     }
+    else arr=arr.concat(elements);
     this.array=arr;
 }
 Collection.prototype.removeAt=function(index) {
